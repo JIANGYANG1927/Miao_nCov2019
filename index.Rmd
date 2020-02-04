@@ -1,0 +1,47 @@
+---
+title: "2019新型冠状病毒疫情数据分析"
+output:
+  html_document:
+    theme: readable
+    highlight: textmate
+    code_folding: hide
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    df_print: paged
+    #css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+如果还没有安装GitHub上面的`GuangchuangYu/nCov2019`这个包（注意要确保这个包的版本要$>=0.0.2$），请用下面的代码安装。
+
+```{r eval=FALSE}
+# 确保nCov2019是>= 0.02版本
+# install.packages('remotes')
+remotes::install_github("GuangchuangYu/nCov2019")
+```
+
+```{r}
+pacman::p_load(nCov2019, dplyr, ggplot2)
+
+
+```
+
+# 当天数据
+
+# 历史数据
+
+```{r}
+dt_past = load_nCov2019()
+dt_past[]
+```
+
+```{r eval=FALSE, echo=FALSE}
+dt_past[] %>% 
+  readr::write_csv(paste0("data/past_city", Sys.Date(), ".csv"))
+```
+
