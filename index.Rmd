@@ -40,6 +40,8 @@ dt_past = load_nCov2019()
 dt_past[]
 ```
 
+w
+
 ```{r eval=FALSE, echo=FALSE}
 dt_past[] %>% 
   readr::write_csv(paste0("data/past_city", Sys.Date(), ".csv"))
